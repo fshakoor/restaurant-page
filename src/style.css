@@ -107,3 +107,12 @@ body {
 .menu-message {
     font-size: 2vh;
 }
+
+.about-message {
+    font-size: 3vh;
+    color: var(--white);
+    text-wrap: wrap;
+    line-break: normal;
+    width: 50%;
+    text-align: center;
+}

@@ -61,13 +61,13 @@ const displays = {
     },
 
     menu: () => {
+        if (displays.displayedContent.contains(displays.message)) {displays.displayedContent.removeChild(displays.message)};
+        if (displays.displayedContent.contains(displays.myIcon)) {displays.displayedContent.removeChild(displays.myIcon)};
         displays.homeButton.classList.remove('activeBtn');
         displays.aboutButton.classList.remove('activeBtn');
         displays.menuButton.classList.add('activeBtn');
 
         displays.title.innerHTML = "Our Current Menu"
-        displays.displayedContent.removeChild(displays.myIcon);
-        displays.displayedContent.removeChild(displays.message);
         displays.menuContainer.classList.add('menu')
         displays.displayedContent.appendChild(displays.menuContainer);
 
@@ -81,7 +81,20 @@ const displays = {
         displays.menuContainer.appendChild(displays.menuMessageTwo);
         displays.menuContainer.appendChild(displays.menuMessageThree);
     },
-    about: () => {}
+    about: () => {
+        if (displays.displayedContent.contains(displays.menuContainer)) {displays.displayedContent.removeChild(displays.menuContainer)};
+        if (displays.displayedContent.contains(displays.myIcon)) {displays.displayedContent.removeChild(displays.myIcon)};
+        
+        displays.homeButton.classList.remove('activeBtn');
+        displays.aboutButton.classList.add('activeBtn');
+        displays.menuButton.classList.remove('activeBtn');
+
+        displays.title.innerHTML = "About Us"
+        displays.displayedContent.appendChild(displays.message);
+        displays.message.classList.remove('message')
+        displays.message.classList.add('about-message')
+        displays.message.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto minus itaque nostrum ipsam aspernatur id velit fugiat commodi, quam tempore exercitationem! Aperiam nulla ducimus adipisci officiis voluptatem mollitia laborum iste. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto minus itaque nostrum ipsam aspernatur id velit fugiat commodi, quam tempore exercitationem! Aperiam nulla ducimus adipisci officiis voluptatem mollitia laborum iste."
+    }
 }
 
 displays.home();
