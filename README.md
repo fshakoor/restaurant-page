@@ -1,1 +1,3 @@
 # restaurant-page
+
+The following project is a simple website for an imaginary restaurant. This project was built to learn and practice webpack and building HTML code out of JS using package bundling. I also practiced more DOM manipulation to simulate tab switching with a nav bar, as well as practiced importing/exporting modules to seperate lengthy code. View the project live here: https://fshakoor.github.io/restaurant-page/
