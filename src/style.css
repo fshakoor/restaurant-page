@@ -1,0 +1,83 @@
+:root {
+    --primary: #1B263B;
+    --secondary: #0D1B2A;
+    --white: #FCFCFC;
+    --gold: gold;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#content {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+    width: 100%;
+}
+
+.header {
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary);
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.main-image {
+    object-fit: cover;
+    width: 50%;
+    height: 50vh;
+}
+
+.nav-bar {
+    padding: 10px;
+    display: flex;
+    gap: 1.5vw;
+}
+
+.btn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    border: 1px solid var(--gold);
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--secondary);
+}
+
+.heading {
+    font-size: 4rem;
+}
+
+.heading, .btn {
+    font-weight: 900;
+    color: var(--white);
+}
+
+.message {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.heading, .message, .btn {
+    letter-spacing: 0.5px;
+}
