@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
+    overflow: none;
 }
 
 #content {
@@ -42,29 +43,39 @@ body {
 .main-image {
     object-fit: cover;
     width: 50%;
-    height: 50vh;
+    height: 60vh;
 }
 
 .nav-bar {
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
     gap: 1.5vw;
+    /* background-color: var(--primary); */
+    /* border: 1px solid var(--gold); */
 }
 
 .btn {
-    font-size: 1.5rem;
-    padding: 10px 20px;
-    background-color: var(--primary);
-    border: 1px solid var(--gold);
+    font-size: 3vh;
+    padding: 10px 50px;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
 }
 
 .btn:hover {
     cursor: pointer;
     background-color: var(--secondary);
+    text-decoration: underline var(--gold);
+    text-underline-offset: 0.5rem;
+    transition: 0.5s;
+}
+
+.activeBtn {
+    text-decoration: underline var(--gold);
+    text-underline-offset: 0.5rem;
 }
 
 .heading {
-    font-size: 4rem;
+    font-size: 7vh;
 }
 
 .heading, .btn {
@@ -74,10 +85,25 @@ body {
 
 .message {
     color: var(--white);
-    font-size: 1.3rem;
+    font-size: 3vh;
     font-style: italic;
 }
 
 .heading, .message, .btn {
     letter-spacing: 0.5px;
+}
+
+.menu {
+    width: 50%;
+    height: min-content;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 50px;
+    gap: 150px;
+}
+
+.menu-message {
+    font-size: 2vh;
 }
